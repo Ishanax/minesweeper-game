@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(emptyArray);
         const joinBombsAndEmptyArray = emptyArray.concat(bombsArray);
         console.log(joinBombsAndEmptyArray);
-        const randomGameArray = joinBombsAndEmptyArray.sort(()=> Math.random() -0.5);
+        const randomGameArray = joinBombsAndEmptyArray.sort(()=> Math.random() -0.5); //note to self: not sure this is the most random way
         
         console.log(randomGameArray);
 
