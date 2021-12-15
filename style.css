@@ -2,11 +2,16 @@
     height: 400px;
     width: 400px;
     display: flex;
-    flex-wrap;
-    background-color:aquamarine;
+    flex-wrap: wrap;
+    border: blue solid 5px;
+    background-color: #a1adb0;
 }
 
 .grid div {
     height: 40px;
     width: 40px;
+}
+
+.bomb {
+    background-color: red;
 }
