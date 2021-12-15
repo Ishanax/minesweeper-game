@@ -3,9 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let bombAmount = 25;
     let width = 10;
     let squares = [];
+    let gameOver = false;
     
-
-
     createBoard = () => {
         //random bombs:
         const bombsArray = Array(bombAmount).fill("bomb"); //fill fills whole array with bomb
@@ -48,10 +47,23 @@ document.addEventListener("DOMContentLoaded", () => {
     
     createBoard()
 
-       //clicking action:
+    //clicking action:
     function click(square) {
+
+        if (gameOver) return;
+
+        if (square.classList.contains("bomb") || square.classList.continas("flag")) return;
+          
         if(square.classList.contains("bomb")){
         console.log("Game over");
+        } else {
+            let totalBombs = square.getAttribute("data");
+            if (totalBombs !=0) {
+                square.classList.add("checked");
+                square.innerHTML = totalBombs;
+                return;
+            }
+            square.classList.add("checked");
         }
     } 
 })
